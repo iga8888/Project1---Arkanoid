@@ -1,0 +1,20 @@
+Instrukcja do gry Arkanoid
+
+Do wyboru sa 3 poziomy EASY, MIDDLE, HARD - wybor poziomu decyduje o tym ile rzedow bloczkow bedzie trzeba zbic podczas gry.
+
+Co 20 sekund bloczki opadaja poziom nizej. W momencie gdy zostala minuta az najnizszy poziom bloczkow przekroczy poziom przegranej tlo gry zmienia kolor na czerwony. Gdy bloczki przejda poza poziom krytyczny nastepuje komunikat o przegranej - wowczas zapisywany jest wynik gry.
+
+Innym warunkiem przegranej jest trzykrotne dotkniecie dolnej krawedzi okna gry przez pilke lub wylaczenie okna gry.
+
+Po stracie zycia nalezy najechac paletka na pilke i kliknac strzalke w gore na klawiaturze. W zaleznosci od tego, ktora czescia paletki najedziemy, wowczas na pilke zacznie sie ona poruszac w linii ukosnej w lewo lub w prawo.
+
+Pilka moze odbijac sie od bloczkow, od paletki i od scian - gornej i bocznych. W zaleznosci od tego, z ktorej strony nastapi odbicie, pilka porusza sie w linii ukosnej w roznych kierunkach.
+
+Warunkiem wygranej jest zbicie wszystkich bloczkow zanim przekrocza poziom krytyczny przy jednoczesnym zachowaniu co najmniej jednego zycia.
+
+Wynik zalezny jest od czasu gry, poziomu trudnosci i ilosci pozostalych bloczkow. Oblicza sie go nastepujaco:
+SCORE = (1000 - czas_gry[s]*0.5 - ilosc_pozostalych_bloczkow) * wspolczynnik_poziomu_trudnosci
+wspolczynnik_poziomu_trudnosci dla poszczegolnych poziomow wynosi:
+EASY = 1
+MIDDLE = 2
+HARD = 3
